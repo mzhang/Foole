@@ -36,7 +36,7 @@ export default class VerificationButton extends Component {
     gtag("event", "verify");
 
     axios.post(
-      "/verify",
+      "https://localhost:5001/gentzen",
       valueToValidate,
       {
         headers: { "Content-type": "text/plain" }

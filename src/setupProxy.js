@@ -4,7 +4,7 @@ const proxy = require("http-proxy-middleware");
 
 module.exports = function(app) {
   app.use(["^/files/", "^/verify$"], proxy({
-    target: "https://student.cs.uwaterloo.ca/~se212/",
+    target: "localhost:5001/",
     changeOrigin: true,
     pathRewrite: {
       "^/files/": "/",

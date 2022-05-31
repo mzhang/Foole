@@ -20,7 +20,7 @@ export default class App extends Component {
 
     this.state = {
       value: "",
-      feedback: "Click the \"Ask George\" button to get feedback.",
+      feedback: "Click the \"Ask Gentzen\" button to get feedback.",
       feedbackExpanded: false,
       openFile: null,
       keyboardHandler: KEYBOARD_HANDLER_DEFAULT,
@@ -58,7 +58,7 @@ export default class App extends Component {
     return (
       <div className={"app" + (this.state.feedbackExpanded ? " app-expand-feedback" : "")}>
         <div className="app-title">
-          Boole
+          Foole
         </div>
 
         <div className="app-control-bar">
@@ -67,7 +67,7 @@ export default class App extends Component {
               value={this.state.value}
               onVerify={(feedback) => this.setState({ feedback, feedbackExpanded: true })}
             >
-              Ask George
+              Ask Gentzen
             </VerificationButton>
 
             <DownloadButton
@@ -101,7 +101,7 @@ export default class App extends Component {
           onClick={() => this.setState({ feedbackExpanded: !this.state.feedbackExpanded })}
         >
           <span className="app-symbol">{this.state.feedbackExpanded ? "▼" : "▲"}</span>
-          George Feedback
+          Gentzen Feedback
         </div>
 
         <div className="app-feedback"><Output value={this.state.feedback} /></div>
